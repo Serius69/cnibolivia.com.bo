@@ -1,0 +1,92 @@
+
+/*===================== 
+	Premery bg color 
+=====================*/
+
+::selection {
+ background: #ff5e15 ;
+}
+::-moz-selection {
+ background: #ff5e15 ;
+}
+::-webkit-selection {
+  background: #ff5e15 ;
+}
+
+/* Primary background color*/
+.left .wt-small-separator div.sep-leaf-right::before, .left .wt-small-separator div.sep-leaf-left::before, .center .wt-small-separator div.sep-leaf-right::before, .center .wt-small-separator div.sep-leaf-left::before,
+.footer-dark .social-icons li a, .pricingtable-highlight, .icon-font-block, .service-side-btn a.btn-block:hover, .project-img-effect-1, .owl-carousel .owl-dots .owl-dot.active span, .owl-carousel .owl-dots .owl-dot:hover span, .owl-prev:hover, .owl-prev:active, .owl-prev:focus, .owl-next:hover, .owl-next:active, .owl-next:focus, .header-style-2 .top-bar .wt-topbar-info li:first-child::before, .header-style-2 .header-nav-request a, .all_services ul li a:hover, .all_services ul li a.active, .service-border-box:hover::before, .site-bg-primary, .wt-tabs.bg-tabs .nav-tabs > li > a,.site-list-style-two li::after,.search-bx button,.site-list-style-one li::after,.since-year strong, .date-style-2 .wt-post-meta ul li.post-category span,.blog-post blockquote,.your-order-list ul li:last-child,.header-style-1 .header-nav .nav > li:hover > a,.header-style-1 .top-bar .wt-topbar-info li:first-child::before,.header-style-1 .header-nav-request a,.services-section-content-right,.testimonial-1-content-outer::after,.play-now .icon,.header-style-3 .top-bar .wt-topbar-info li:first-child::before,.header-style-3 .header-nav-request a,.h-category,.animate_line:hover::after, .animate_line:hover::before,.hover-effect-content .mfp-link:hover,.header-style-4 .header-nav-request a, .date-style-3 .wt-post-meta ul li.post-category span, .site-list-style-one-new li::after, .about-max-two::after, .card1::before, .project-box-style1 .project-view .project-view-btn i, .latest-blog-3.large-date .post-date,.description-list li i,.sr-btn-filter-wrap li.btn-active.sr-btn-circle,.post-style-12 .wt-post-info::before,#search-two .close,.service-icon-box-three:hover,.half-wide-bg,.header-style-11.bg-half-block-bar .header-middle::after,.wt-team-2 .team-social-icon li a,.ls-circle,.project-new-2 .project-new-content2 span,.project-new-2 .project-view .project-view-btn i{
+	background-color:#ff5e15 ;
+}
+.site-button{background-color:#ff5e15 !important}
+
+/*-----Secondry background colo-----*/
+.site-button-secondry, .acc-bg-gray .acod-head .indicator, .project-img-effect-1 a.mfp-link, .header-style-2 .header-search, .owl-prev, .owl-next, .all_services, .site-bg-secondry, .wt-tabs.bg-tabs .nav-tabs > li > a.active, .overlay-icon a,.header-style-3 .header-search,.footer-dark.footer-style2 .footer-top,.contact-info-section,.header-style-4 .header-search{
+    background-color:#00173c;
+}
+
+/* Buttons hover bg color*/
+.site-button:hover, .site-button:focus, .site-button:active, .nl-search-btn:hover{
+	background-color:#b84915;
+}
+
+
+/*===================== 
+	Primary text color 
+=====================*/
+/* Premery text color*/
+h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover, .header-nav .nav > li:hover > a, .header-nav .nav > li .sub-menu li a:hover, .header-nav .nav > li .sub-menu li:hover > a, header-nav .nav > li .mega-menu > li ul a:hover, .header-nav .nav > li.active > a, .header-nav .nav > li.current-menu-item > a, .header-nav .nav li.has-child.nav-active > a, ol.comment-list li.comment .reply a, .masonry-filter > li.active a, .masonry-filter > li a:hover, .masonry-filter > li a:active, .masonry-filter > li a:focus, .nav-dark.header-nav .nav > li .sub-menu li a:hover, .site-button-link::after, .our-team-two ul li a:hover, .site-text-primary, .footer-dark .footer-bottom .copyrights-nav li a, .footer-dark .footer-bottom .copyrights-nav li::after, .footer-dark .footer-top h1, .footer-dark .footer-top h2, .footer-dark .footer-top h3, .footer-dark .footer-top h4, .footer-dark .footer-top h5, .footer-dark .footer-top h6, .footer-dark .footer-top h1 a, .footer-dark .footer-top h2 a, .footer-dark .footer-top h3 a, .footer-dark .footer-top h4 a, .footer-dark .footer-top h5 a, .footer-dark .footer-top h6 a, .footer-dark .widget_address li i,
+.site-footer .widget_services ul li a:hover, .wt-team-1 .team-social-center ul li a:hover, .footer-dark .footer-top a:active, .footer-dark .footer-top a:focus, .footer-dark .footer-top a:hover, .header-style-2 .header-nav .nav > li > a:hover, blockquote .fa-quote-left, .testimonial-2 .testimonial-text .fa-quote-left, .wt-breadcrumb li:last-child, .video3-section-blockquote .fa-quote-left,.wt-product-box .price ins,.widget .wt-post-meta li,.widget_archives ul li a:hover,.widget_services ul li a:hover,.widget_tag_cloud a:hover, .since-year2 strong,.project-2-block .wt-title a:hover,.project-stamp .project-stamp-list li a i, .date-style-2 .wt-post-meta ul li.post-date, .date-style-2 .wt-post-meta ul li.post-comment, .date-style-2 .wt-post-readmore a,.video-section-blockquote2 .fa-quote-left,.testimonial-1 .testimonial-text .fa-quote-left,.footer-dark.footer-style2 .footer-bottom .copyrights-nav li a:hover,.header-style-3 .header-nav .nav > li > a:hover,.wt-team-1 .team-name a:hover,.header-style-4 .header-nav .nav > li > a:hover,.box-style1 .wt-icon-number span, .date-style-3 .wt-post-meta ul li.post-author, .date-style-3 .wt-post-meta ul li.post-date, .date-style-3 .wt-post-meta ul li.post-comment,.date-style-3 .wt-post-readmore a,.testimonial-4 .testimonial-text .fa-quote-left, .project-new-content span, .btn-filter-wrap li.btn-active, .wt-team-10 .team-name a:hover, .project-box-style1 .project-content .project-title-large a:hover, .latest-blog-3 .wt-post-readmore a,.wt-team-arc2 .team-social-icon li a:hover,.testimonial-5 .quote-left::before,.service-box-style12 .service-title-large a:hover,.testimonial-12-content .testimonial-12 .testimonial-info .testimonial-position,.testimonial-12-content .testimonial-12 .testimonial-text i,#search-two .search-btn i,.header-style-11 .header-nav .nav > li .sub-menu li:hover > a,.header-style-11 .header-nav .nav > li:hover > a,.header-style-11 .header-nav .nav li.has-child.nav-active > a,.service-box-style2 .service-title-large a:hover,.wt-team-2 .team-detail p,.wt-team-2 .team-detail a:hover,.testimonial-11-content .testimonial-11 .testimonial-text i,.testimonial-11-content .testimonial-11 .testimonial-info .testimonial-position{
+	color:#ff5e15 ;
+}
+.header-style-1 .header-nav .nav li:hover.has-child.nav-active > a{color:#fff;}
+.header-style-1 .header-nav .nav li:hover.has-child .submenu-toogle{color:#fff;}
+
+/*-----border color-----*/
+.wt-team-1 .team-social-center, .header-style-2 #search-toggle-block, .testimonial-2 .testimonial-text, .video-section-blockquote, .service-box-title, .video3-section-blockquote,.colarge-2,.colarge-1::before, .colarge-1::after,.project-2-block .wt-title,.project-stamp .project-stamp-list,.project-1-inner-pic::after,.line-filter .filter-content,.video-section-blockquote2,.rev-title-left-border,.header-style-3 #search-toggle-block,.box-style1-title, .colarge-1-new::before,.slider-block-3, .about-two .about-year .about-year-info span, .icon-circle-box .icon-circle::before,.icon-circle-box .icon-circle::after,.client-logo2-media::before,.client-logo2-media::after{
+	border-color:#ff5e15;
+}
+.about-three .about-year .about-year-info {
+    background-color:rgba(255, 95, 21, 0.8);
+}
+
+/*===================== 
+	play btn
+ =====================*/
+
+
+.play-now .ripple, .play-now .ripple:before, .play-now .ripple:after {
+	-webkit-box-shadow: 0 0 0 0 rgb(255, 94, 21);
+	-moz-box-shadow: 0 0 0 0 rgb(255, 94, 21);
+	-ms-box-shadow: 0 0 0 0 rgb(255, 94, 21);
+	-o-box-shadow: 0 0 0 0 rgb(255, 94, 21);
+	box-shadow: 0 0 0 0 rgb(255, 94, 21);
+}
+
+.whatWedo-media-inner{
+/* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#1bbce8+0,00173c+100 */
+background: rgb(252,93,22); /* Old browsers */
+background: -moz-linear-gradient(left,  rgba(252,93,22,1) 0%, rgba(2,23,60,1) 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(left,  rgba(252,93,22,1) 0%,rgba(2,23,60,1) 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to right,  rgba(252,93,22,1) 0%,rgba(2,23,60,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fc5d16', endColorstr='#02173c',GradientType=1 ); /* IE6-9 */
+
+}
+
+.whatWedo-media-content::after{
+	border-top-color:#00173c;
+}
+
+.footer-dark.footer-style2 .footer-bottom {
+	background-color:#001029;
+	border-top: 1px solid #001029;
+}
+
+/*REVOLUTION SLIDER ARROW BUTTON*/
+#welcome_wrapper .metis.tparrows{background-color:#ff5e15 ;}
+
+.box-style1:after{
+background: rgb(255,94,21);
+background: linear-gradient(0deg, rgba(255,94,21,1) 0%, rgba(0,23,60,1) 100%); 
+	
+}
