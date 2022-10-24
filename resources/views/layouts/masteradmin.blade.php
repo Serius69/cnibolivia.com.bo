@@ -159,6 +159,7 @@
                                     {{-- <li><a href="{{ url('/admin/service') }}">SERVICIOS</a></li> --}}
                                     <li><a href="{{ url('/admin/banner') }}">BANNER</a></li>
                                     <li><a href="{{ url('/admin/typelatest') }}">TIPO NOTICIA</a></li>
+                                    <li><a href="{{ url('/admin/course') }}">CURSOS</a></li>
                                 </ul>
                             </li>
                         </ul>

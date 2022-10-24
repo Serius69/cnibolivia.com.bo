@@ -14,12 +14,12 @@
                                 <div class="wt-post-media wt-img-effect zoom-slow">
                                     {{-- image --}}
                                     {{-- src="{{ url('img/banners_inicio/'.$banner->path2) }}" --}}
-                                    <a href="{{ route('curso.show',$course->id) }}"><img src="{{ url('img/cursos/'.$course->path) }}" alt=""></a>
+                                    <a href="{{ route('curso.show',$course->id) }}"><img src="{{ url('img/curso/'.$course->path) }}" alt=""></a>
                                 </div>
                                 <div class="wt-post-info bg-white p-t30">
                                     <div class="wt-post-meta ">
                                         <ul>
-                                            <li class="post-category"><span>{{ $course->type->type }}</span> </li>
+                                            {{-- <li class="post-category"><span>{{ $course->type->type }}</span> </li> --}}
                                             <li class="post-date">
                                                 <?php $mes = date('m', strtotime($course->date_publication)); ?>
                                                 @if ($mes == '01')

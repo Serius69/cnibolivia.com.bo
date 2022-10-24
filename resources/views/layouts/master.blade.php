@@ -49,6 +49,8 @@
 
     <link rel="stylesheet" href="{{url('css/wp.css')}}">
 
+    <link rel="stylesheet" href="{{url('css/particles.css')}}">
+
 
      <!-- REVOLUTION SLIDER CSS -->
     <link rel="stylesheet" type="text/css" href="{{url('plugins/revolution/revolution/css/settings.css')}}">
@@ -168,6 +170,8 @@
                             </li>
                             <li><a href="{{ url('noticias/lista') }}">NOTICIAS</a>
                             </li>
+                            <li><a href="{{ url('cursos/lista') }}">CURSOS</a>
+                            </li>
                             <li><a href="{{ url('calendario') }}">CALENDARIO</a>
                             </li>
                         </ul>
@@ -185,11 +189,10 @@
 <!-- HEADER END -->
 
 <body>
-
+    
     <a href="https://api.whatsapp.com/send?phone=59178983393" class="btn-wsp" target="_blank">
 	    <i class="fa fa-whatsapp icono"></i>
 	</a>
-
 
 @yield('body')
 
@@ -216,6 +219,8 @@
 <script  src="{{url('js/custom.js')}}"></script>
 <script  src="{{url('js/lc_lightbox.lite.js')}}"></script>
 <script  src="{{url('js/switcher.js')}}"></script>
+<script  src="{{url('js/particles.js')}}"></script>
+<script src="{{ asset('js/app.js') }}"></script>
 <!-- REVOLUTION JS FILES -->
 
 <script  src="{{url('plugins/revolution/revolution/js/jquery.themepunch.tools.min.js')}}"></script>

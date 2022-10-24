@@ -25,7 +25,7 @@ return view('banner.banners', $data);
 */
 public function index()
 {
-$data['banners'] = banner::orderBy('id','desc')->paginate(10);
+$data['banners'] = banner::orderBy('id','asc')->paginate(10);
 return view('banner.bannerCRUD', $data);
 }
 /**

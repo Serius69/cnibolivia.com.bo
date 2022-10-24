@@ -1,6 +1,7 @@
 @extends('layouts.master')
 
 @section('body')
+
     <!-- CONTENT START -->
     <div class="page-content">
 
@@ -12,20 +13,30 @@
                     <div class="tp-banner" >
                         <!-- START REVOLUTION SLIDER 5.4.1 -->
                         <div id="rev_slider_26_1_wrapper" class="rev_slider_wrapper fullscreen-container" data-alias="mask-showcase" data-source="gallery" style="background:#aaaaaa;padding:0px;">
-
                             <div id="rev_slider_26_1" class="rev_slider fullscreenbanner tiny_bullet_slider" style="display:none;" data-version="5.4.1">
-                                <ul>                                  
+                                <ul>
 
                                     @foreach ($banners as $banner)
                                     {{-- @if (($banner->id)==1 || ($banner->id)==2 || ($banner->id)==3) --}}
                                     <!-- SLIDE 2 -->
+
                                     <li data-index="rs-{{$banner->id}}" data-transition="fade" data-slotamount="default" data-hideafterloop="0" data-hideslideonmobile="off"  data-easein="default" data-easeout="default" data-masterspeed="300"  data-thumb=""  data-rotate="0"  data-saveperformance="off"  data-title="Slide">
 
                                         <!-- MAIN IMAGE -->
-                                        <img src="{{ url('img/banners_inicio/'.$banner->path2) }}" alt=""  data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" data-bgparallax="off" class="rev-slidebg">
+                                        <div class="innerbanner">
+                                            {{-- @if(($banner->id)>0) --}}
+                                            <div id="particles-js">                                                
+                                            </div>
+                                            {{-- @endif --}}
+                                            {{-- <div class="text-area"> --}}
+                                              <img src="{{ url('img/banners_inicio/'.$banner->path2) }}" alt=""  data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" data-bgparallax="off" class="rev-slidebg">
+                                            {{-- </div> --}}
+                                        </div>
+
                                         <!-- LAYERS -->
 
                                         <!-- LAYER 1 [ for overlay ] -->
+                                        
                                         <div class="tp-caption tp-shape tp-shapewrapper "
                                             id="slide-74-layer-1"
                                             data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']"
@@ -47,7 +58,11 @@
                                             data-paddingbottom="[0,0,0,0]"
                                             data-paddingleft="[0,0,0,0]"
 
-                                            style="z-index:2;background-color:rgba(0, 0, 0, 0.5);border-color:rgba(0, 0, 0, 0);border-width:0px;">
+
+
+                                            {{-- style="z-index:2;background-color:rgba(255, 255, 255, 0.5);border-color:rgba(0, 0, 0, 0);border-width:0px;" --}}
+                                            >
+
                                         </div>
 
 
@@ -133,6 +148,7 @@
 
                                             style="z-index: 6;">
                                             <img src="{{ url('img/banners_inicio/'.$banner->path1) }}" alt="" data-ww="['1000px','1000px','800px','500px']" data-hh="['480px','480px','450','281']" width="1200" height="675" data-no-retina>
+
                                         </div>
 
 
@@ -140,112 +156,16 @@
                                     {{-- @endif --}}
 
                                     @endforeach
-                                    {{-- <!-- SLIDE 3 -->
-                                    <li data-index="rs-75" data-transition="fade" data-slotamount="default" data-hideafterloop="0" data-hideslideonmobile="off"  data-easein="default" data-easeout="default" data-masterspeed="300"  data-thumb=""  data-rotate="0"  data-saveperformance="off"  data-title="Slide">
-                                        <!-- MAIN IMAGE -->
-                                        <img src="{{ url('img/banners_inicio/nuevoroldelcfo(b).jpeg') }}" alt=""  data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" data-bgparallax="off" class="rev-slidebg">
-                                        <!-- LAYERS -->
-                                        <!-- LAYER 1 [ for overlay ] -->
-                                        <div class="tp-caption tp-shape tp-shapewrapper "
-                                            id="slide-75-layer-1"
-                                            data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']"
-                                            data-y="['middle','middle','middle','middle']" data-voffset="['0','0','0','0']"
-                                            data-width="full"
-                                            data-height="full"
-                                            data-whitespace="nowrap"
-                                            data-type="shape"
-                                            data-basealign="slide"
-                                            data-responsive_offset="off"
-                                            data-responsive="off"
-                                            data-frames='[
-                                            {"from":"opacity:0;","speed":1000,"to":"o:1;","delay":0,"ease":"Power4.easeOut"},
-                                            {"delay":"wait","speed":1000,"to":"opacity:0;","ease":"Power4.easeOut"}
-                                            ]'
-                                            data-textAlign="['left','left','left','left']"
-                                            data-paddingtop="[0,0,0,0]"
-                                            data-paddingright="[0,0,0,0]"
-                                            data-paddingbottom="[0,0,0,0]"
-                                            data-paddingleft="[0,0,0,0]"
-                                            style="z-index:2;background-color:rgba(0, 0, 0, 0.5);border-color:rgba(0, 0, 0, 0);border-width:0px;">
-                                        </div>
-                                        <!-- LAYER NR. 3 -->
-                                        <div class="tp-caption   tp-resizeme"
-                                            id="slide-75-layer-3"
-                                            data-x="['left','left','center','center']" data-hoffset="['0','0','0','0']"
-                                            data-y="['middle','middle','middle','middle']" data-voffset="['0','0','-100','-120']"
-                                            data-fontsize="['100','100','60','40']"
-                                            data-lineheight="['100','100','60','40']"
-                                            data-width="['700','650','620','380']"
-                                            data-height="none"
-                                            data-whitespace="normal"
-                                            data-type="text"
-                                            data-responsive_offset="on"
-                                            data-frames='[{"delay":200,"speed":750,"sfxcolor":"#ddd","sfx_effect":"blockfromleft","frame":"0","from":"z:0;","to":"o:1;","ease":"Power3.easeInOut"},
-                                            {"delay":"wait","speed":500,"sfxcolor":"#ffffff","sfx_effect":"blocktoleft","frame":"999","to":"z:0;","ease":"Power4.easeOut"}]'
-                                            data-textAlign="['left','left','center','center']"
-                                            data-paddingtop="[20,20,20,20]"
-                                            data-paddingright="[20,20,20,20]"
-                                            data-paddingbottom="[30,30,30,30]"
-                                            data-paddingleft="[20,20,20,20]"
-                                            style="z-index: 8; font-weight: 800; color: #ffffff; font-family: 'Teko', sans-serif;">
-                                            <a style="top: 50px; font-size:80px ; color: #ffffff; top: -100px ;">WEBINAR</a>
-                                            <p style="font-size: 30px">NUEVO ROL DEL CFO</p>
-                                        </div>
-                                        <!-- LAYER NR. 4 -->
-                                        <a href="https://forms.gle/optU4fAxRwSLSmcx9" target="_blank">
-                                            <div class="tp-caption rev-btn  tp-resizeme"
-                                            id="slide-75-layer-4"
-                                            data-x="['left','left','center','center']" data-hoffset="['25','0','0','0']"
-                                            data-y="['middle','middle','middle','middle']" data-voffset="['150','150','50','-30']"
-                                            data-width="none"
-                                            data-height="none"
-                                            data-whitespace=""
-                                            data-type="button"
-                                            data-responsive_offset="on"
-                                            data-frames='[{"delay":500,"speed":1000,"sfxcolor":"#ddd","sfx_effect":"blockfromleft","frame":"0","from":"z:0;","to":"o:1;","ease":"Power3.easeInOut"},
-                                            {"delay":"wait","speed":500,"sfxcolor":"#ffffff","sfx_effect":"blocktoleft","frame":"999","to":"z:0;","ease":"Power4.easeOut"},
-                                            {"frame":"hover","speed":"0","ease":"Linear.easeNone","to":"o:1;rX:0;rY:0;rZ:0;z:0;","style":"c:rgb(0,0,0);bg:rgb(255,255,255);"}]'
-                                            data-textAlign="['inherit','inherit','inherit','inherit']"
-                                            data-paddingtop="[0,0,0,0]"
-                                            data-paddingright="[30,30,30,30]"
-                                            data-paddingbottom="[0,0,0,0]"
-                                            data-paddingleft="[30,30,30,30]"
-                                            style="z-index: 10; font-size: 18px; line-height: 50px; font-weight: 400; color: rgba(255,255,255,1);
-                                            letter-spacing: 2px;font-family: 'Poppins', sans-serif; border-color:rgb(255,255,255);
-                                            border-style:solid;border-width:1px 1px 1px 1px;outline:none;box-shadow:none;
-                                            box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;cursor:pointer;">Regístrate
-                                        </div>
-                                        </a>
-                                        <!-- LAYER NR. 5 -->
-                                        <div class="tp-caption   tp-resizeme rs-parallaxlevel-2"
-                                            id="slide-75-layer-5"
-                                            data-x="['center','center','center','center']" data-hoffset="['500','500','0','0']"
-                                            data-y="['middle','middle','bottom','bottom']" data-voffset="['0','0','50','50']"
-                                            data-width="none"
-                                            data-height="none"
-                                            data-whitespace="nowrap"
-                                            data-type="image"
-                                            data-responsive_offset="on"
-                                            data-frames='[{"delay":400,"speed":750,"sfxcolor":"#000","sfx_effect":"blockfromleft","frame":"0","from":"z:0;","to":"o:1;","ease":"Power3.easeInOut"},
-                                            {"delay":"wait","speed":500,"sfxcolor":"#ffffff","sfx_effect":"blocktoleft","frame":"999","to":"z:0;","ease":"Power4.easeOut"}]'
-                                            data-textAlign="['inherit','inherit','inherit','inherit']"
-                                            data-paddingtop="[0,0,0,0]"
-                                            data-paddingright="[0,0,0,0]"
-                                            data-paddingbottom="[0,0,0,0]"
-                                            data-paddingleft="[0,0,0,0]"
-                                            style="z-index: 6;">
-                                            <img src="{{ url('img/banners_inicio/nuevoroldelcfo(f).png') }}" alt="" data-ww="['1000px','1000px','800px','500px']" data-hh="['480px','480px','450','281']" width="1200" height="675" data-no-retina>
-                                        </div>
-                                    </li>   --}}
 
                                 </ul>
                                 <div class="tp-bannertimer" style="height: 10px; background: rgba(0, 0, 0, 0.15);"></div>
                             </div>
 
                         </div>
-                </div>
+                    </div>
                 </div>
             </div>
+        </div>
 
         </div>
         <!-- SLIDER END -->
@@ -253,18 +173,20 @@
         {{-- LAST LATESTS START --}}
         <div class="section-full  p-t80 p-b50 bg-white ">
             <div class="container">
-    
+
                 <!-- BLOG SECTION START -->
                 <div class="section-content">
                     <div class="row d-flex justify-content-center">
                         <!--Block one-->
                         @foreach ($latests as $latest)
+                        @if(($latest->status)==1)
                             <div class="col-lg-4 col-md-6 col-sm-12">
                                 <div class="blog-post date-style-2">
                                     <div class="wt-post-media wt-img-effect zoom-slow">
                                         {{-- image --}}
                                         {{-- src="{{ url('img/banners_inicio/'.$banner->path2) }}" --}}
-                                        <a href="{{ route('noticia.show',$latest->id) }}"><img src="{{ url('img/noticias/'.$latest->path) }}" alt=""></a>
+                                        <a href="{{ route('noticia.show',$latest->id) }}"><img src="{{ url('img/noticias/'.$latest->path) }}" width="300" height="300" alt="noticia"></a>
+                                        {{-- src="{{ url('img/curso/'.$course->path) }}" --}}
                                     </div>
                                     <div class="wt-post-info bg-white p-t30">
                                         <div class="wt-post-meta ">
@@ -298,14 +220,14 @@
                                                         Diciembre
                                                     @else
                                                     @endif
-    
-    
+
                                                     {{ date('d', strtotime($latest->date_publication)) }},
                                                     {{ date('Y', strtotime($latest->date_publication)) }},
                                                 </li>
-                                            </ul> 
+                                            </ul>
                                         </div>
                                         <div class="wt-post-title ">
+
                                             <h3 class="post-title"><a href="{{ route('noticia.show',$latest->id) }}"
                                                     class="site-text-secondry">{{ $latest->title }}</a></h3>
                                         </div>
@@ -318,20 +240,21 @@
                                     </div>
                                 </div>
                             </div>
+                            @endif
                         @endforeach
-    
-    
-    
+
+
+
                     </div>
-    
+
                     {{-- <ul class="pagination m-b0 p-b0">
                         {{ $latests->links() }}
                     </ul> --}}
-    
+
                 </div>
-    
+
             </div>
-    
+
         </div>
 
         {{-- LAST LATESTS END --}}
@@ -416,12 +339,10 @@
 
 
 
-
-
-
-
         <!-- ABOUT ONE SECTION START -->
         <div class="section-full p-t80 p-b50 bg-no-repeat bg-center bg-white">
+            {{-- <A>HOLA</A> --}}
+
             <div class="about-section-three">
                 <div class="container">
                     <div class="section-content">
@@ -636,6 +557,86 @@
                                 <div class="cardbg-pic" style="background-image: url(images/ui-10/services/4.jpg);"></div>
 
                             </div>
+                        </div>
+                        <div class="section-full  p-t80 p-b50 bg-white ">
+                            <div class="container">
+                    
+                                <!-- BLOG SECTION START -->
+                                <div class="section-content">
+                                    <div class="row d-flex justify-content-center">
+                                        <!--Block one-->
+                                        @foreach ($courses as $course)
+                                            <div class="col-lg-4 col-md-6 col-sm-12">
+                                                <div class="blog-post date-style-2">
+                                                    <div class="wt-post-media wt-img-effect zoom-slow">
+                                                        {{-- image --}}
+                                                        {{-- src="{{ url('img/banners_inicio/'.$banner->path2) }}" --}}
+                                                        <a href="{{ route('curso.show',$course->id) }}"><img src="{{ url('img/curso/'.$course->path) }}" width="300" height="300" alt=""></a>
+                                                    </div>
+                                                    <div class="wt-post-info bg-white p-t30">
+                                                        <div class="wt-post-meta ">
+                                                            <ul>
+                                                                {{-- <li class="post-category"><span>{{ $course->type->type }}</span> </li> --}}
+                                                                <li class="post-date">
+                                                                    <?php $mes = date('m', strtotime($course->date_publication)); ?>
+                                                                    @if ($mes == '01')
+                                                                        Enero
+                                                                    @elseif($mes == '02')
+                                                                        Febrero
+                                                                    @elseif($mes == '03')
+                                                                        Marzo
+                                                                    @elseif($mes == '04')
+                                                                        Abril
+                                                                    @elseif($mes == '05')
+                                                                        Mayo
+                                                                    @elseif($mes == '06')
+                                                                        Junio
+                                                                    @elseif($mes == '07')
+                                                                        Julio
+                                                                    @elseif($mes == '08')
+                                                                        Agosto
+                                                                    @elseif($mes == '09')
+                                                                        Septiembre
+                                                                    @elseif($mes == '10')
+                                                                        Octubre
+                                                                    @elseif($mes == '11')
+                                                                        Noviembre
+                                                                    @elseif($mes == '12')
+                                                                        Diciembre
+                                                                    @else
+                                                                    @endif
+                                                                    {{ date('d', strtotime($course->date_publication)) }},
+                                                                    {{ date('Y', strtotime($course->date_publication)) }},
+                                                                </li>
+                                                            </ul> 
+                                                        </div>
+                                                        <div class="wt-post-title ">
+                                                            <h3 class="post-title"><a href="{{ route('curso.show',$course->id) }}"
+                                                                    class="site-text-secondry">{{ $course->title }}</a></h3>
+                                                        </div>
+                                                        <div class="wt-post-readmore ">
+                                                            <a href="{{ route('curso.show',$course->id) }}" class="site-button-link black">
+                                                                {{ substr($course->description, 0, 90) }} >> <a
+                                                                href="{{ route('curso.show',$course->id) }}">Ver Mas</a>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        @endforeach
+                    
+                    
+                    
+                                    </div>
+                    
+                                    {{-- <ul class="pagination m-b0 p-b0">
+                                        {{ $courses->links() }}
+                                    </ul> --}}
+                    
+                                </div>
+                    
+                            </div>
+                    
                         </div>
 
                         <!-- COLUMNS 5

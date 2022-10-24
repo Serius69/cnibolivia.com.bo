@@ -8,6 +8,7 @@ use App\Models\Latest;
 use App\Models\User;
 use App\Models\Typelatest;
 use App\Models\Banner;
+use App\Models\Course;
 use App\Models\Service;
 
 
@@ -25,6 +26,7 @@ class DatabaseSeeder extends Seeder
         Latest::factory(20)->create();
         Banner::factory(20)->create();
         Service::factory(20)->create();
+        Course::factory(20)->create();
         
     }
 }

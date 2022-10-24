@@ -22,6 +22,7 @@
                 </div>
             </div>
         </div>
+        
         <!-- INNER PAGE BANNER END -->
 
         <!-- OUR BLOG START -->
@@ -47,6 +48,8 @@
                                     </div>
                                     <div class="wt-post-title ">
                                         <h2 class="post-title">Nuestra Historia</h2>
+                                        <div id="particles-js"></div>
+                                        <div class="particles-js" ></div>
                                     </div>
 
                                     <div class="wt-post-text">

@@ -4,6 +4,8 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use App\Models\Typelatest;
+
 class Latest extends Model
 {
     use HasFactory;
@@ -20,10 +22,9 @@ class Latest extends Model
         'description',
         'date_publication',
         'url',
-        'status',
         'path',
-        'type_id'
-
+        'type_id',
+        'status'
     ];
 
      

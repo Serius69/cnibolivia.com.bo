@@ -36,9 +36,7 @@
         <tr>
             <th>ID</th>
             <th>Nombre</th>
-            <th>Tipo</th>
             <th>Descripcion</th>
-            <th>Fecha publicacion</th>
             <th>Imagen</th>
             <th>URL</th>
             <th>Accion</th>
@@ -47,11 +45,9 @@
         @if (($course->status)==1)
         <tr>
             <td>{{ $course->id }}</td>
-            <td>{{ $course->title }}</td>
-            <td>{{ $course->type->type }}</td>            
+            <td>{{ $course->name }}</td>          
             <td>{{ $course->description }}</td>
-            <td>{{ $course->date_publication }}</td>
-            <td><img src="{{ url('img/noticias/'.$course->path) }}"  alt="Greenture"></td>
+            <td><img src="{{ url('img/curso/'.$course->path) }}"  alt="Greenture"></td>
             <td> <a href="{{ $course->url }}">URL externa</a>  </td>
             <td>
                 <a class="btn btn-primary" href="{{ route('courses.edit',$course->id) }}">Editar</a>

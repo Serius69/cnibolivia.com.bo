@@ -16,7 +16,7 @@ public function list()
 {
 // $data['latests'] = DB::table('latests')->where('status','1')->orderBy('date_publication','ASC')->paginate(6);
 $data['latests'] = Latest::orderBy('date_publication','asc')->paginate(7);
-return view('latest.latests', $data);
+return view('latest.list', $data);
 }
 /**
 * Display a listing of the resource.

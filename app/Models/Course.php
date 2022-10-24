@@ -4,11 +4,11 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-
+use App\Models\Typecourse;
 class Course extends Model
 {
     use HasFactory;
-    protected $table = 'latests';
+    protected $table = 'courses';
 
 /**
      * The attributes that are mass assignable.
@@ -19,15 +19,14 @@ class Course extends Model
     protected $fillable = [
         'name',
         'description',
-        'date_registers',
+        'date_publication',
         'url',
-        'status',
         'path',
-        'type_id'
+        'status'
     ];     
 
     public function type()
     {
-    return $this->belongsTo(Typelatest::class, 'type_id');
+    return $this->belongsTo(Typecourse::class, 'type_id');
     }
 }

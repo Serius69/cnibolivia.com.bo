@@ -9,6 +9,7 @@
                 <div class="row d-flex justify-content-center">
                     <!--Block one-->
                     @foreach ($latests as $latest)
+                    @if(($latest->status)==1)
                         <div class="col-lg-4 col-md-6 col-sm-12">
                             <div class="blog-post date-style-2">
                                 <div class="wt-post-media wt-img-effect zoom-slow">
@@ -68,6 +69,7 @@
                                 </div>
                             </div>
                         </div>
+                        @endif
                     @endforeach
 
 

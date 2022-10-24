@@ -14,6 +14,10 @@ use App\Http\Controllers\LatestCRUDController;
 use App\Http\Controllers\ServiceCRUDController;
 use App\Http\Controllers\BannerCRUDController;
 use App\Http\Controllers\TypelatestCRUDController;
+use App\Http\Controllers\CourseCRUDController;
+use App\Http\Controllers\CourseController;
+use Illuminate\Support\Facades\Auth;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -32,7 +36,7 @@ Route::get('/index', function () {
     return view('index');
 });
 Route::get('/indexasociados', function () {
-    return view('indexasociados')->middleware('auth');
+    return view('indexasociados');
 });
 Route::get('/servicios', function () {
     return view('servicios');
@@ -75,8 +79,12 @@ Route::get('luchacontraelcontrabando', function () {
 // Routing of latest
 Route::controller(LatestController::class)->group(function(){
     Route::get('noticias/lista',  'list');
-    Route::get('noticia/mostrar/?',  'view')->middleware('auth');
-    Route::get('latest/delete',  'investigation')->middleware('auth');
+    Route::get('noticia/mostrar/?',  'view');
+});
+// Routing of couses
+Route::controller(CourseController::class)->group(function(){
+    Route::get('cursos/lista',  'list');
+    Route::get('cursos/mostrar/?',  'view');
 });
 // Routing of latest crud
 Route::controller(LatestCRUDController::class)->group(function(){
@@ -105,6 +113,13 @@ Route::controller(BannerCRUDController::class)->group(function(){
     Route::get('admin/banner/create', 'create')->middleware('auth');
     Route::get('admin/banner/edit', 'edit')->middleware('auth');
 });
+// Routing of Banner crud
+Route::controller(CourseCRUDController::class)->group(function(){
+    Route::get('admin/course', 'index')->middleware('auth');
+    Route::get('admin/course/show', 'show')->middleware('auth');
+    Route::get('admin/course/create', 'create')->middleware('auth');
+    Route::get('admin/course/edit', 'edit')->middleware('auth');
+});
 // Routing of latest crud
 Route::controller(HomeController::class)->group(function(){
     Route::get('admin', 'admin')->middleware('auth');
@@ -117,14 +132,16 @@ Route::resource('latests', LatestCRUDController::class)->middleware('auth');;
 Route::resource('services', ServiceCRUDController::class)->middleware('auth');;
 Route::resource('banners', BannerCRUDController::class)->middleware('auth');;
 Route::resource('typelatests', TypelatestCRUDController::class)->middleware('auth');;
-
+Route::resource('courses', CourseCRUDController::class)->middleware('auth');;
 // LATEST
 Route::resource('noticia', LatestController::class);
 // SERVICE
-Route::resource('service2', ServiceController::class)->middleware('auth');
+Route::resource('servicio', ServiceController::class);
+// COURSE
+Route::resource('curso', CourseController::class);
 // FILE STORAGE
 Route::get('get/{filename}', [FileController::class, 'getfile'])->middleware('auth');
 // ADMIN
 Route::resource('admins', HomeController::class)->middleware('auth');
-
+// 
 Auth::routes();

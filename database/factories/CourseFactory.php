@@ -2,19 +2,20 @@
 
 namespace Database\Factories;
 
+use App\Models\Course;
 use Illuminate\Database\Eloquent\Factories\Factory;
-use App\Models\Latest;
+
 /**
- * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Latest>
+ * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Course>
  */
-class LatestFactory extends Factory
+class CourseFactory extends Factory
 {
     /**
      * The name of the factory's corresponding model.
      *
      * @var string
      */
-    protected $model = Latest::class;
+    protected $model = Course::class;
     /**
      * Define the model's default state.
      *
@@ -22,14 +23,12 @@ class LatestFactory extends Factory
      */
     public function definition()
     {
-
         return [
-            'title' => $this->faker->sentence(),
+            'name' => $this->faker->sentence(),
             'description' => $this->faker->sentence(),
             'date_publication' => $this->faker->date(),
             'url' => "https://picsum.photos/800/600?random=12965",
-            'path' => 'noticia.jpg',
-            'type_id' => 1,
+            'path' => 'curso.jpg',
             'status' => 1
         ];
     }

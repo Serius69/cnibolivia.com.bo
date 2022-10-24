@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Banner;
+use App\Models\Course;
 use App\Models\Latest;
 
 class HomeController extends Controller
@@ -17,7 +18,8 @@ class HomeController extends Controller
     {
         $data = [
             'banners'  => Banner::orderBy('id','desc')->paginate(3),
-            'latests'   => Latest::orderBy('date_publication','desc')->paginate(3)
+            'latests'   => Latest::orderBy('date_publication','desc')->paginate(3),
+            'courses'   => Course::orderBy('date_publication','desc')->paginate(3)
         ];
         // $this->middleware('home');
         return view('index',$data);
@@ -32,7 +34,8 @@ class HomeController extends Controller
     {
         $data = [
             'banners'  => Banner::orderBy('id','desc')->paginate(3),
-            'latests'   => Latest::orderBy('date_publication','desc')->paginate(3)
+            'latests'   => Latest::orderBy('date_publication','desc')->paginate(3),
+            'courses'   => Course::orderBy('date_publication','desc')->paginate(3)
         ];
         return view('index',$data);
     }

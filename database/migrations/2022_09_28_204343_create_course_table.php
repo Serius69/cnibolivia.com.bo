@@ -13,22 +13,14 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('latests', function (Blueprint $table) {
+        Schema::create('courses', function (Blueprint $table) {
             $table->id();
-            $table->string('title');
-            $table->string('description');
+            $table->string('name');
+            $table->string('description'); 
             $table->date('date_publication')->default('2022-09-1')->nullable();
             $table->string('url')->nullable();
-            $table->integer('status')->default(1);
             $table->string('path');
-
-            // $table->unsignedBigInteger('photo_id');
-            // $table->foreign('photo_id')->references('id')->on('photos');
-
-            $table->unsignedBigInteger('type_id')->default(1);
-            $table->foreign('type_id')->references('id')->on('typelatest');
-
-
+            $table->integer('status')->default(1);
             $table->timestamps();
         });
     }
@@ -40,6 +32,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('latests');
+        Schema::dropIfExists('course');
     }
 };

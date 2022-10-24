@@ -14,7 +14,7 @@ class LatestController extends Controller
     public function list(){
         // $latests = DB::table('latests')->where('status','1')->orderBy('date_publication','ASC')->paginate(6);
         $data['latests'] = latest::orderBy('date_publication','desc')->paginate(9);
-        return view('latest.latests',$data);
+        return view('latest.list',$data);
     }
     public function listindex(){
 

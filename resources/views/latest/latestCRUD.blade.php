@@ -51,7 +51,7 @@
             <td>{{ $latest->type->type }}</td>            
             <td>{{ $latest->description }}</td>
             <td>{{ $latest->date_publication }}</td>
-            <td><img src="{{ url('img/noticias/'.$latest->path) }}"  alt="Greenture"></td>
+            <td><img src="{{ url('img/noticias/'.$latest->path) }}"  alt="Noticia"></td>
             <td> <a href="{{ $latest->url }}">URL externa</a>  </td>
             <td>
                 <a class="btn btn-primary" href="{{ route('latests.edit',$latest->id) }}">Editar</a>
